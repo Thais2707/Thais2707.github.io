@@ -25,7 +25,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_669cfbfe-40f4-48f6-b5f5-2a217c5afe9c.jfif');
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -45,7 +44,6 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 15px;
-    padding: 50px 20px;
 }
 
 nav ul li a {
@@ -64,7 +62,6 @@ nav ul li a:hover {
     align-items: center; 
     margin: 20px;
 }
-
 
 section {
     width: 100%; 
@@ -95,8 +92,9 @@ section h2 {
 
 .item img {
     border-radius: 30%; 
-    width: 260px; 
-    height: 290px; 
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 260px; /* Limita a largura máxima da imagem */
     margin-right: 20px; 
 }
 
@@ -154,12 +152,17 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .content {
-        flex-direction: column;
+    nav ul li {
+        display: block; /* Coloca os itens do menu em coluna */
+        margin: 10px 0; /* Ajusta as margens */
     }
 
-    section, aside {
-        width: 100%;
-        margin-right: 0;
+    .item {
+        width: 100%; /* Itens ocupando toda a largura disponível */
+        margin-bottom: 20px; /* Espaço entre itens */
+    }
+
+    .items-container {
+        flex-direction: column; /* Alinha itens verticalmente */
     }
 }
