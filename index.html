@@ -1,74 +1,164 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bugigangas de Hécate</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-    <header>
-        <div class="overlay" style="background-image: url(https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_669cfbfe-40f4-48f6-b5f5-2a217c5afe9c.jfif);"></div>
-        <h1>Bugigangas de Hécate</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>     
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black; 
+    font-size: 20px;
+}
 
-    <div class="content">
-        <section>
-            <h2>Sobre a Loja</h2>
-            <p>
-                Há muito tempo, Hécate, a poderosa deusa da magia e das encruzilhadas, vagou entre os mundos, distribuindo sabedoria e poder. Após milênios de aventuras e feitiçaria, ela decidiu desacelerar e abrir sua loja, Bugigangas de Hécate, em um canto mágico do universo.
-            </p> 
-            <p>
-                Agora, ao invés de reger o destino dos mortais, Hécate passa seus dias vendendo artefatos encantados e poções misteriosas. Cada item conta uma história, e ela se diverte relembrando suas antigas batalhas ao lado de titãs e heróis. Com cabelos prateados e um sorriso tranquilo, Hécate recebe seus clientes com o calor de uma avó e o conselho para a próxima aventura.
-            </p>
-            <p>
-                Para ela, suas bugigangas são mais que mercadorias — são memórias de um tempo distante que ela adora compartilhar com quem estiver disposto a ouvir suas histórias e, claro, levar algo especial.
-            </p>
+h1, h2, h3 {
+    font-family: 'Metamorphous', cursive;
+}
 
-            <hr>
+header {
+    position: relative;
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden;
+}
 
-            <div class="items-container">
-                <div class = "item">
-                <img src="https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_b96cc119-8250-4e35-90b9-c8b996121b7e.jfif" alt="Gema Elemental de Fogo">
-                <div class="item-text">
-                    <h3>Gema Elemental de Fogo</h3>
-                    <p>Esta gema, criada com fragmentos das chamas de uma fênix, contém um feitiço de invocação. Ao ser esmagada, invoca um elemental de fogo com o dobro dos atributos do invocador. O elemental deixa rastros de fogo e lança bolas flamejantes (50 de dano). É vulnerável à água, recebendo 50% mais dano de ataques desse tipo. Sob controle de quem quebrou a gema, ele obedece fielmente, desaparecendo após 4 rodadas.</p>
-                </div>
-            </div>
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1; 
+}
 
-            <div class="item">
-                <img src="https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_b400fb38-39f5-413a-b3e5-5a425f3fb377.jfif" alt="Bálsamo de Pedra">
-                <div class="item-text">
-                    <h3>Bálsamo de Pedra</h3>
-                    <p>Este unguento mágico é feito com poeira de gorgonas petrificadas e possui duas funções incríveis. Ao ser aplicado em uma criatura petrificada, reverte o efeito da petrificação, trazendo-a de volta à vida. Quando usado em um ser saudável, cria uma armadura temporária, endurecendo a pele como rocha e conferindo 100 PA (pontos de armadura). Aplique-o como um creme hidratante; cada frasco é suficiente para uma única aplicação.</p>
-                </div>
-            </div>
-        </div>
-        </section>
+header h1, nav {
+    position: relative;
+    z-index: 2;
+}
 
-        <aside>
-            <h3>Outras Lojas Mágicas</h3>
-            <ul>
-                <li><a href="#">A Taberna dos Feiticeiros</a></li>
-                <li><a href="#">Empório do Aventureiro</a></li>
-                <li><a href="#">Mercado dos Dragões</a></li>
-            </ul>
-        </aside>
-    </div>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-    <footer>
-        <p>&copy; 2024 Loja de Bugigangas Mágicas de Hécate. Todos os direitos reservados. Magia garantida ou seu dinheiro de volta (em pedras rúnicas).</p>
-    </footer>
-</body>
-</html>
+nav ul li {
+    display: inline;
+    margin: 15px;
+    padding: 50px 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgba(57, 111, 38, 0.657);
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px;
+}
+
+
+section {
+    width: 100%; 
+    text-align: center;
+    background-color: rgba(57, 111, 38, 0.657);
+    padding: 20px;
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}
+
+section h2 {
+    text-align: center;
+}
+
+.items-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.item {
+    display: flex;
+    align-items: flex-start; 
+    margin-top: 20px;
+    text-align: center; 
+    width: 48%;
+}
+
+.item img {
+    border-radius: 30%; 
+    width: 260px; 
+    height: 290px; 
+    margin-right: 20px; 
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column; 
+}
+
+.item-text h3 {
+    margin: 0 0 5px;
+}
+
+aside {
+    background-color: rgb(97, 19, 33); 
+    padding: 20px;
+    width: 100%; 
+    text-align: center; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #ffeb3b; 
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: white; 
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: rgba(57, 111, 38, 0.657); 
+}
+
+footer {
+    background-color: rgba(57, 111, 38, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 15px; 
+    border-top: 2px solid #ffeb3b; 
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    section, aside {
+        width: 100%;
+        margin-right: 0;
+    }
+}
