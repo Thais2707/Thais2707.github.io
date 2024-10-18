@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black; 
+    font-size: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Metamorphous', cursive;
+}
+
+header {
+    position: relative;
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/_669cfbfe-40f4-48f6-b5f5-2a217c5afe9c.jfif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1; 
+}
+
+header h1, nav {
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+    padding: 50px 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgba(57, 111, 38, 0.657);
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px;
+}
+
+
+section {
+    width: 100%; 
+    text-align: center;
+    background-color: rgba(57, 111, 38, 0.657);
+    padding: 20px;
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}
+
+section h2 {
+    text-align: center;
+}
+
+.items-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.item {
+    display: flex;
+    align-items: flex-start; 
+    margin-top: 20px;
+    text-align: center; 
+    width: 48%;
+}
+
+.item img {
+    border-radius: 30%; 
+    width: 260px; 
+    height: 290px; 
+    margin-right: 20px; 
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column; 
+}
+
+.item-text h3 {
+    margin: 0 0 5px;
+}
+
+aside {
+    background-color: rgb(97, 19, 33); 
+    padding: 20px;
+    width: 100%; 
+    text-align: center; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #ffeb3b; 
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: white; 
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: rgba(57, 111, 38, 0.657); 
+}
+
+footer {
+    background-color: rgba(57, 111, 38, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 15px; 
+    border-top: 2px solid #ffeb3b; 
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    section, aside {
+        width: 100%;
+        margin-right: 0;
+    }
+}
