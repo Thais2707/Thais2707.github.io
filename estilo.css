@@ -93,8 +93,8 @@ section h2 {
 .item img {
     border-radius: 30%; 
     width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: 260px; /* Limita a largura máxima da imagem */
+    height: auto;
+    max-width: 260px;
     margin-right: 20px; 
 }
 
@@ -153,16 +153,16 @@ footer p {
 
 @media (max-width: 768px) {
     nav ul li {
-        display: block; /* Coloca os itens do menu em coluna */
-        margin: 10px 0; /* Ajusta as margens */
+        display: block;
+        margin: 10px 0;
     }
 
     .item {
-        width: 100%; /* Itens ocupando toda a largura disponível */
-        margin-bottom: 20px; /* Espaço entre itens */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .items-container {
-        flex-direction: column; /* Alinha itens verticalmente */
+        flex-direction: column;
     }
 }
