@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jardim do Lago</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('SEU_USER_ID');
+        })();
+    </script>
+</head>
+<body>
+
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand text-success fw-bold">
+                <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/_dacdb90f-45bd-4282-ad9d-a793e99a80d6-removebg-preview.png?raw=true" alt="Logo Jardim do Lago" style="height: 50px;">
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contato">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#testemunhos">Testemunhos</a></li>
+                </ul>
+            </nav>
+            <a href="#contato" class="btn btn-success">Entre em Contato</a>
+        </div>
+    </header>
+
+    <section id="banner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://raw.githubusercontent.com/Thais2707/Thais2707-jardimdolago.github.io/refs/heads/main/_aff113ee-a6c7-4c26-83ba-90d70e068ad5.jfif" class="d-block w-100" alt="Paisagismo Personalizado">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-light">Transforme seu ambiente com o poder da natureza</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/Thais2707/Thais2707-jardimdolago.github.io/refs/heads/main/_baccd0df-d3fa-42f7-bedf-f0e17698747e.jfif" class="d-block w-100" alt="Arranjos de Flores Personalizados">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-light">Paisagismo personalizado para seu jardim</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/Thais2707/Thais2707-jardimdolago.github.io/refs/heads/main/_b91402d8-5c4e-44fa-8c00-46b7cb9d1e4f.jfif" class="d-block w-100" alt="Flores e Jardins">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-light">Experimente a beleza das flores em sua casa</h2>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </section>
+
+    <section id="sobre" class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold text-success">Quem Somos</h2>
+            <p class="lead text-muted">
+                A Jardim do Lago é uma empresa familiar que, há mais de 20 anos, se dedica a transformar ambientes através da beleza e da harmonia das plantas e flores. Desde a sua fundação, nossa trajetória é marcada por altos e baixos, desafios e conquistas, mas sempre guiada pela paixão pelo paisagismo e o amor pela natureza.
+            </p>
+            <p>
+                Hoje, a Jardim do Lago é um símbolo de qualidade e tradição, um espaço onde o amor pela natureza se une à expertise em paisagismo, criando ambientes únicos e memoráveis. Nossa missão é continuar a inspirar e proporcionar experiências extraordinárias, fazendo com que cada cliente se sinta parte da nossa história.
+            </p>
+            <p>
+                Agradecemos a todos que fazem parte da nossa jornada e convidamos você a conhecer um pouco mais do nosso trabalho e a transformar seu espaço com o toque especial da natureza!
+            </p>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-success text-center">Nossos Serviços</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="servicos-container">
+                    <div class="swiper-slide">
+                        <h5><a href="ficha_paisagismo.html" class="text-dark text-decoration-none">Paisagismo Personalizado</a></h5>
+                        <p>Criamos projetos de paisagismo sob medida para residências, empresas e espaços públicos, transformando ambientes e valorizando a natureza.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h5><a href="catalogo_flores.html" class="text-dark text-decoration-none">Arranjos Florais</a></h5>
+                        <p>Nossos arranjos são elaborados com flores frescas e de alta qualidade, perfeitos para qualquer ocasião, seja um evento especial ou para decorar o seu lar.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h5><a href="catalogo_plantas.html" class="text-dark text-decoration-none">Venda de Plantas</a></h5>
+                        <p>Disponibilizamos uma variedade de plantas e flores, com opções para todos os gostos, incluindo espécies nativas e exóticas.</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testemunhos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-success text-center">O Que Nossos Clientes Dizem</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"O Jardim do Lago transformou meu quintal em um verdadeiro paraíso! As plantas são lindas e o atendimento é excepcional. Recomendo a todos!"</p>
+                            <h5 class="card-title">Maria Silva</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"Fiquei impressionado com a qualidade dos arranjos florais. Foram perfeitos para o meu casamento! Obrigado, Jardim do Lago!"</p>
+                            <h5 class="card-title">João Pereira</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"A equipe do Jardim do Lago é super atenciosa e criativa. Eles entenderam exatamente o que eu queria para meu escritório!"</p>
+                            <h5 class="card-title">Ana Costa</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section id="contato" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-success text-center">Entre em Contato</h2>
+            <form id="contact-form">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome Completo" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="tel" class="form-control" id="telefone" placeholder="Telefone" required>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <textarea class="form-control" id="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-success">Enviar Mensagem</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="localizacao">
+        <div class="container">
+            <h2>Localização da Loja</h2>
+            <p>Visite-nos em nossa loja física!</p>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Jardim do Lago - Naturalmente Extraordinário</p>
+        <div>
+            <a href="#" class="text-white mx-2">Instagram</a>
+            <a href="#" class="text-white mx-2">Facebook</a>
+        </div>
+        <p><a href="#" class="text-white">Termos de Uso</a> | <a href="#" class="text-white">Política de Privacidade</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializando o mapa
+        var map = L.map('map').setView([-29.917684912589532, -51.16767514277657], 15); // Coordenadas da sua loja
+
+        // Adicionando o layer do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionando um marcador na localização da loja
+        var marker = L.marker([-29.917684912589532, -51.16767514277657]).addTo(map);
+        marker.bindPopup("<b>Jardim do Lago</b><br>Floricultura e Paisagista.").openPopup();
+    </script>
+</body>
+</html>

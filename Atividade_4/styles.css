@@ -1,0 +1,206 @@
+/* Adicionando Variáveis de Estilo */
+:root {
+    --cor-principal: #28a745;
+    --cor-secundaria: #333;
+    --cor-fundo: #f4f4f9;
+    --cor-texto-claro: #ffffff;
+    --cor-texto-escuro: #666;
+    --margem: 15px;
+    --padding: 10px 20px;
+}
+
+/* Ajustes nos Botões */
+header .btn,
+#contato .btn {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header .btn:hover,
+#contato .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Links com Efeito de Foco */
+header .nav-link:focus,
+footer a:focus {
+    outline: 2px solid var(--cor-principal);
+}
+
+/* Tipografia com Google Fonts */
+body {
+    font-family: 'Arial', sans-serif; /* Mude para a fonte desejada */
+}
+
+/* Header */
+header {
+    background-color: var(--cor-texto-claro);
+    border-bottom: 2px solid var(--cor-principal);
+    padding: 10px 0;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+}
+
+header .nav-link {
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+header .nav-link:hover {
+    color: var(--cor-principal);
+}
+
+header .btn {
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Banner Principal */
+#banner {
+    position: relative;
+    height: 100vh;
+}
+
+#banner img {
+    object-fit: cover;
+    height: 100vh;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: left;
+}
+
+.carousel-caption h2 {
+    font-size: 3rem;
+    color: var(--cor-texto-claro);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 50px 0;
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+    color: var(--cor-texto-escuro);
+}
+
+/* Seção Serviços */
+#servicos {
+    padding: 50px 0;
+}
+
+#servicos h2 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#servicos .card {
+    border: none;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+#servicos .card:hover {
+    transform: translateY(-10px);
+}
+
+#servicos .card-title {
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+}
+
+#servicos .card-text {
+    font-size: 1rem;
+    color: var(--cor-texto-escuro);
+}
+
+/* Seção Contato */
+#contato {
+    padding: 50px 0;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contato .form-control {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+#contato .btn {
+    background-color: var(--cor-principal);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#contato .btn:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--cor-principal);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    #servicos .card {
+        margin-bottom: 20px;
+    }
+
+    #contato .form-control {
+        padding: 10px;
+    }
+
+    #contato .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
