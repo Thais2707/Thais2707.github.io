@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <section id="update-area">
+        <h1>ATUALIZAÇÃO</h1>
+
+        <section>
+            <h2>Adicionar Personagens</h2>
+            <form id="add-player-form">
+                <label for="player-name">Nome do Personagem:</label>
+                <input type="text" id="player-name" required>
+                <button type="submit">Adicionar Personagem</button>
+            </form>
+            <ul id="player-list"></ul>
+            <p id="player-message"></p>
+        </section>
+
+        <section>
+            <h2>Adicionar Recompensa</h2>
+            <form id="mission-form">
+                <label for="mission-name">Nome da Missão:</label>
+                <input type="text" id="mission-name" required>
+                
+                <label for="xp">XP:</label>
+                <input type="number" id="xp" required>
+                
+                <label for="chaos">Chaos:</label>
+                <input type="number" id="chaos" required>
+                
+                <label for="items">Itens:</label>
+                <input type="text" id="items" required>
+
+                <label for="players">Selecionar Personagens:</label>
+                <div id="players-container"></div>
+                
+                <button type="submit">Adicionar Missão</button>
+            </form>
+            <ul id="mission-log"></ul>
+        </section>
+
+        <section>
+            <h2>Transferências de Itens</h2>
+            <form id="inventory-form">
+                <label for="donor">Doação de:</label>
+                <input type="text" id="donor" required>
+                <label for="recipient">Para:</label>
+                <input type="text" id="recipient" required>
+                <label for="item">Item:</label>
+                <input type="text" id="item" required>
+                <button type="submit">Transferir Item</button>
+            </form>
+            <ul id="inventory-log"></ul>
+        </section>
+
+        <section>
+         <h2>Registro de Compras</h2>
+         <form id="purchase-form">
+                <label for="purchaser">Comprador:</label>
+                <input type="text" id="purchaser" name="purchaser" required>
+        
+                <label for="purchase-item">Item:</label>
+                <input type="text" id="purchase-item" name="purchase-item" required>
+        
+                <label for="purchase-value">Valor da Compra:</label>
+                <input type="text" id="purchase-value" name="purchase-value" required>
+        
+                <button type="submit">Registrar Compra</button>
+         </form>
+         <ul id="purchase-log"></ul>
+        </section>
+
+        <section id="update-notes">
+            <h2>Notas de Atualização</h2>
+            <div id="notes-content"></div>
+            <div class="button-container">
+                <button id="generate-pdf">Gerar PDF das Notas</button>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

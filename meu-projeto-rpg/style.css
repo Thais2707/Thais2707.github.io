@@ -1,0 +1,155 @@
+body {
+    font-family: 'Georgia', serif; 
+    background-image: url('https://aventurasnahistoria.com.br/media/uploads/arqueologia/pergaminhodndn.jpg'); 
+    background-size: cover;
+    color: #ffffff; 
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#update-area {
+    max-width: 800px; 
+    margin: 0 auto;   
+    background-color: rgba(34, 34, 34, 0.8); 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: transparent; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #b9a325;
+}
+
+input[type="text"],
+input[type="password"], 
+input[type="number"], 
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff; 
+    color: #333; 
+}
+
+button {
+    padding: 10px;
+    background-color: #339437; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif; 
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.2); 
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f4f4f4; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#inventory-display {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+#inventory-display ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#inventory-display li {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#admin-login {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#login-message {
+    color: #ff0000; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; padding: 5px;
+    background-color: #339437; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif; 
+}
