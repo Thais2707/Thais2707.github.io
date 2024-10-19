@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="overlay"></div>
+        <div class="overlay" style="background-image: url(https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_669cfbfe-40f4-48f6-b5f5-2a217c5afe9c.jfif);"></div>
         <h1>Bugigangas de Hécate</h1>
         <nav>
             <ul>
@@ -39,31 +39,36 @@
             <hr>
 
             <div class="items-container">
-                <div class = "item">
-                <img src="Images/_b96cc119-8250-4e35-90b9-c8b996121b7e.jfif" alt="Gema Elemental de Fogo">
-                <div class="item-text">
-                    <h3>Gema Elemental de Fogo</h3>
-                    <p>Esta gema, criada com fragmentos das chamas de uma fênix, contém um feitiço de invocação. Ao ser esmagada, invoca um elemental de fogo com o dobro dos atributos do invocador. O elemental deixa rastros de fogo e lança bolas flamejantes (50 de dano). É vulnerável à água, recebendo 50% mais dano de ataques desse tipo. Sob controle de quem quebrou a gema, ele obedece fielmente, desaparecendo após 4 rodadas.</p>
+                <div class="item">
+                    <img src="https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_b96cc119-8250-4e35-90b9-c8b996121b7e.jfif" alt="Gema Elemental de Fogo">
+                    <div class="item-text">
+                        <h3>Gema Elemental de Fogo</h3>
+                        <p>Esta gema, criada com fragmentos das chamas de uma fênix, contém um feitiço de invocação. Ao ser esmagada, invoca um elemental de fogo com o dobro dos atributos do invocador. O elemental deixa rastros de fogo e lança bolas flamejantes (50 de dano). É vulnerável à água, recebendo 50% mais dano de ataques desse tipo. Sob controle de quem quebrou a gema, ele obedece fielmente, desaparecendo após 4 rodadas.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item">
-                <img src="Images/_b400fb38-39f5-413a-b3e5-5a425f3fb377.jfif" alt="Bálsamo de Pedra">
-                <div class="item-text">
-                    <h3>Bálsamo de Pedra</h3>
-                    <p>Este unguento mágico é feito com poeira de gorgonas petrificadas e possui duas funções incríveis. Ao ser aplicado em uma criatura petrificada, reverte o efeito da petrificação, trazendo-a de volta à vida. Quando usado em um ser saudável, cria uma armadura temporária, endurecendo a pele como rocha e conferindo 100 PA (pontos de armadura). Aplique-o como um creme hidratante; cada frasco é suficiente para uma única aplicação.</p>
+                <div class="item">
+                    <img src="https://raw.githubusercontent.com/Thais2707/Thais2707.github.io/refs/heads/main/_b400fb38-39f5-413a-b3e5-5a425f3fb377.jfif" alt="Bálsamo de Pedra">
+                    <div class="item-text">
+                        <h3>Bálsamo de Pedra</h3>
+                        <p>Este unguento mágico é feito com poeira de gorgonas petrificadas e possui duas funções incríveis. Ao ser aplicado em uma criatura petrificada, reverte o efeito da petrificação, trazendo-a de volta à vida. Quando usado em um ser saudável, cria uma armadura temporária, endurecendo a pele como rocha e conferindo 100 PA (pontos de armadura). Aplique-o como um creme hidratante; cada frasco é suficiente para uma única aplicação.</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
-
         <aside>
             <h3>Outras Lojas Mágicas</h3>
-            <ul>
-                <li><a href="#">A Taberna dos Feiticeiros</a></li>
-                <li><a href="#">Empório do Aventureiro</a></li>
-                <li><a href="#">Mercado dos Dragões</a></li>
-            </ul>
+            <div class="button-container">
+                <a href="#" class="magic-button taberna">
+                    <span>A Taberna dos Feiticeiros</span>
+                </a>
+                <a href="#" class="magic-button emporio">
+                    <span>Empório do Aventureiro</span>
+                </a>
+                <a href="#" class="magic-button mercado">
+                    <span>Mercado dos Dragões</span>
+                </a>
+            </div>
         </aside>
     </div>
 
