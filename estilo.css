@@ -137,13 +137,13 @@ aside h3 {
     background-position: center;
     color:  #ffeb3b;
     text-decoration: none;
-    padding: 100px 110px;
+    padding: 80px 20px;
     border-radius: 6px;
     width: 100%; 
     max-width: 300px; 
     min-width: 80px;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     position: relative;
     overflow: hidden; 
@@ -186,7 +186,7 @@ aside h3 {
 
 .magic-button:hover {
     color: #ffeb3b; 
-    font-size: 40px;
+    font-size: 28px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
