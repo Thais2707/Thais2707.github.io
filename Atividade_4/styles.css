@@ -178,22 +178,37 @@ footer a:focus {
 }
 
 #contato .form-control {
-    border-radius: 0;
+    border-radius: 5px;
     border: 1px solid #ced4da;
-    margin-bottom: 15px;
-    padding: 15px;
+    margin-bottom: var(--margem);
+    padding: var(--padding);
+    font-size: 1rem;
 }
 
 #contato .btn {
     background-color: var(--cor-principal);
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2rem;
+    color: var(--cor-texto-claro);
+    border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #contato .btn:hover {
     background-color: #acc592;
+}
+
+.feedback-success {
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feedback-error {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 }
 
 #testemunhos {
