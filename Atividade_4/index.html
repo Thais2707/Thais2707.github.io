@@ -13,13 +13,18 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init('service_6tuofp7');
+            emailjs.init('HUwZY5Y-2oOBSw6vC');
         })();
     </script>
     <style>
+        #map {
+            height: 400px;
+        }
+        
         header {
             position: fixed;
             top: 0;
@@ -56,6 +61,11 @@
     </header>
 
     <section id="banner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/paisagismo.jpg?raw=true" class="d-block w-100" alt="Paisagismo Personalizado">
@@ -107,52 +117,26 @@
     <section id="servicos" class="py-5">
         <div class="container">
             <h2 class="fw-bold text-success text-center">Nossos Serviços</h2>
-            <div class="d-flex flex-wrap justify-content-center" id="servicos-container">
-                <div class="servico-item text-center m-3">
-                    <h5 class="card-title"><a href="ficha_paisagismo.html" class="text-dark text-decoration-none">Paisagismo Personalizado</a></h5>
-                    <p>Criamos projetos de paisagismo sob medida para residências, empresas e espaços públicos, transformando ambientes e valorizando a natureza.</p>
-                    <a href="ficha_paisagismo.html" class="btn btn-musgo">Saiba Mais</a>
-                </div>
-                <div class="servico-item text-center m-3">
-                    <h5 class="card-title"><a href="catalogo_flores.html" class="text-dark text-decoration-none">Arranjos Florais</a></h5>
-                    <p>Nossos arranjos são elaborados com flores frescas e de alta qualidade, perfeitos para qualquer ocasião, seja um evento especial ou para decorar o seu lar.</p>
-                    <a href="catalogo_flores.html" class="btn btn-musgo">Saiba Mais</a>
-                </div>
-                <div class="servico-item text-center m-3">
-                    <h5 class="card-title"><a href="catalogo_plantas.html" class="text-dark text-decoration-none">Venda de Plantas</a></h5>
-                    <p>Disponibilizamos uma variedade de plantas e flores, com opções para todos os gostos, incluindo espécies nativas e exóticas.</p>
-                    <a href="catalogo_plantas.html" class="btn btn-musgo">Saiba Mais</a>
-                </div>
-            </div>
-        </div>
-    </section>    
-
-    <section id="testemunhos" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
-            <h2 class="fw-bold text-success text-center">O Que Nossos Clientes Dizem</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card shadow">
-                        <div class="card-body">
-                            <p class="card-text">"O Jardim do Lago transformou meu quintal em um verdadeiro paraíso! As plantas são lindas e o atendimento é excepcional. Recomendo a todos!"</p>
-                            <h5 class="testimonial-title">Maria Silva</h5>
-                        </div>
+                    <div class="servico-item text-center h-100 d-flex flex-column justify-content-between">
+                        <h5 class="card-title"><a href="ficha_paisagismo.html" class="text-dark text-decoration-none">Paisagismo Personalizado</a></h5>
+                        <p>Criamos projetos de paisagismo sob medida para residências, empresas e espaços públicos, transformando ambientes e valorizando a natureza.</p>
+                        <a href="ficha_paisagismo.html" class="btn btn-musgo mt-auto">Saiba Mais</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card shadow">
-                        <div class="card-body">
-                            <p class="card-text">"Fiquei impressionado com a qualidade dos arranjos florais. Foram perfeitos para o meu casamento! Obrigado, Jardim do Lago!"</p>
-                            <h5 class="testimonial-title">João Pereira</h5>
-                        </div>
+                    <div class="servico-item text-center h-100 d-flex flex-column justify-content-between">
+                        <h5 class="card-title"><a href="catalogo_flores.html" class="text-dark text-decoration-none">Arranjos Florais</a></h5>
+                        <p>Nossos arranjos são elaborados com flores frescas e de alta qualidade, perfeitos para qualquer ocasião, seja um evento especial ou para decorar o seu lar.</p>
+                        <a href="catalogo_flores.html" class="btn btn-musgo mt-auto">Saiba Mais</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card shadow">
-                        <div class="card-body">
-                            <p class="card-text">"A equipe do Jardim do Lago é super atenciosa e criativa. Eles entenderam exatamente o que eu queria para meu escritório!"</p>
-                            <h5 class="testimonial-title">Ana Costa</h5>
-                        </div>
+                    <div class="servico-item text-center h-100 d-flex flex-column justify-content-between">
+                        <h5 class="card-title"><a href="catalogo_plantas.html" class="text-dark text-decoration-none">Venda de Plantas</a></h5>
+                        <p>Oferecemos uma vasta seleção de plantas e flores, com qualidade garantida e variedades que se adaptam ao seu estilo e necessidade.</p>
+                        <a href="catalogo_plantas.html" class="btn btn-musgo mt-auto">Saiba Mais</a>
                     </div>
                 </div>
             </div>
@@ -184,38 +168,52 @@
         </div>
     </section>
 
-    <section id="localizacao">
-        <div class="container">
-            <h2>Localização da Loja</h2>
-            <p>Visite-nos em nossa loja física!</p>
-            <div id="map" style="height: 400px;"></div>
-        </div>
-    </section>
+    <div id="map"></div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Jardim do Lago - Naturalmente Extraordinário</p>
-        <div>
-            <a href="#" class="text-white mx-2">Instagram</a>
-            <a href="#" class="text-white mx-2">Facebook</a>
-        </div>
-        <p><a href="#" class="text-white">Termos de Uso</a> | <a href="#" class="text-white">Política de Privacidade</a></p>
+    <footer class="py-4 bg-light text-center">
+        <p class="text-dark">© 2023 Jardim do Lago. Todos os direitos reservados.</p>
+        <p>
+            Siga-nos <br>
+            <a href="https://www.instagram.com/jardimdolago?igsh=MWdqbm14NGo5a201dQ==" target="_blank" class="text-success">Instagram</a>
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var map = L.map('map').setView([-29.917684912589532, -51.16767514277657], 15);
 
-        var map = L.map('map').setView([-29.917684912589532, -51.16767514277657], 15); 
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            var marker = L.marker([-29.917684912589532, -51.16767514277657]).addTo(map);
+            marker.bindPopup("<b>Jardim do Lago</b><br>Floricultura e Paisagista.").openPopup();
 
-        var marker = L.marker([-29.917684912589532, -51.16767514277657]).addTo(map);
-        marker.bindPopup("<b>Jardim do Lago</b><br>Floricultura e Paisagista.").openPopup();
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                var nome = document.getElementById('nome').value;
+                var email = document.getElementById('email').value;
+                var telefone = document.getElementById('telefone').value;
+                var mensagem = document.getElementById('mensagem').value;
+
+                emailjs.send('service_6tuofp7', 'template_i3gvwsd', {
+                    from_name: nome,
+                    from_email: email,
+                    from_telefone: telefone,
+                    message: mensagem
+                })
+                .then(function(response) {
+                    alert('Mensagem enviada com sucesso!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));
+                });
+            });
+        });
     </script>
 </body>
 </html>
