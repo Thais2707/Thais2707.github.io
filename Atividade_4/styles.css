@@ -1,6 +1,5 @@
-/* Adicionando Variáveis de Estilo */
 :root {
-    --cor-principal: #28a745;
+    --cor-principal: #4A6A2A;
     --cor-secundaria: #333;
     --cor-fundo: #f4f4f9;
     --cor-texto-claro: #ffffff;
@@ -9,7 +8,64 @@
     --padding: 10px 20px;
 }
 
-/* Ajustes nos Botões */
+body {
+    font-family: 'Arima', sans-serif;
+}
+
+header {
+    background-color: var(--cor-texto-claro);
+    border-bottom: 2px solid var(--cor-principal);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+}
+
+header .navbar-toggler {
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    border: none;
+    padding: 10px;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--cor-texto-claro);
+    width: 200px;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav.collapse.show {
+    display: block;
+}
+
+nav .nav-link {
+    padding: 10px 15px;
+    color: var(--cor-principal);
+}
+
 header .btn,
 #contato .btn {
     transition: background-color 0.3s, transform 0.3s;
@@ -21,53 +77,20 @@ header .btn:hover,
     transform: scale(1.05);
 }
 
-/* Links com Efeito de Foco */
 header .nav-link:focus,
 footer a:focus {
     outline: 2px solid var(--cor-principal);
 }
 
-/* Tipografia com Google Fonts */
-body {
-    font-family: 'Arial', sans-serif; /* Mude para a fonte desejada */
-}
-
-/* Header */
-header {
-    background-color: var(--cor-texto-claro);
-    border-bottom: 2px solid var(--cor-principal);
-    padding: 10px 0;
-}
-
-header .navbar-brand {
-    font-size: 1.5rem;
-    color: var(--cor-principal);
-}
-
-header .nav-link {
-    font-size: 1rem;
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-header .nav-link:hover {
-    color: var(--cor-principal);
-}
-
-header .btn {
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-/* Banner Principal */
 #banner {
     position: relative;
-    height: 100vh;
+    height: auto;
 }
 
 #banner img {
     object-fit: cover;
-    height: 100vh;
+    height: 50vh;
+    min-height: 300px;
 }
 
 .carousel-caption {
@@ -75,7 +98,7 @@ header .btn {
     bottom: 20%;
     left: 10%;
     right: 10%;
-    text-align: left;
+    text-align: center;
 }
 
 .carousel-caption h2 {
@@ -84,15 +107,31 @@ header .btn {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Seção Sobre */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    height: 50px;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
 #sobre {
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 #sobre h2 {
     font-size: 2.5rem;
     color: var(--cor-principal);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #sobre p {
@@ -100,39 +139,33 @@ header .btn {
     color: var(--cor-texto-escuro);
 }
 
-/* Seção Serviços */
-#servicos {
-    padding: 50px 0;
+#servicos .servico-item {
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 }
 
-#servicos h2 {
-    font-size: 2.5rem;
-    color: var(--cor-principal);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#servicos .card {
+.btn-musgo {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
     border: none;
-    transition: transform 0.3s ease;
-    margin-bottom: 30px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    margin-top: auto;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#servicos .card:hover {
-    transform: translateY(-10px);
+.btn-musgo:hover {
+    background-color: #acc592;
+    transform: scale(1.05);
 }
 
-#servicos .card-title {
-    font-size: 1.5rem;
-    color: var(--cor-principal);
-}
-
-#servicos .card-text {
-    font-size: 1rem;
-    color: var(--cor-texto-escuro);
-}
-
-/* Seção Contato */
 #contato {
     padding: 50px 0;
 }
@@ -160,10 +193,78 @@ header .btn {
 }
 
 #contato .btn:hover {
-    background-color: #218838;
+    background-color: #acc592;
 }
 
-/* Footer */
+#testemunhos {
+    padding: 50px 0;
+    background-color: var(--cor-fundo);
+}
+
+.testimonial-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1;
+    min-height: 60px; 
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    #servicos .card {
+        margin-bottom: 20px;
+    }
+
+    #contato .form-control {
+        padding: 10px;
+    }
+
+    #contato .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #banner img {
+        height: 30vh;
+    }
+}
+
 footer {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto-claro);
@@ -183,24 +284,4 @@ footer a {
 
 footer a:hover {
     color: var(--cor-principal);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .carousel-caption h2 {
-        font-size: 2rem;
-    }
-
-    #servicos .card {
-        margin-bottom: 20px;
-    }
-
-    #contato .form-control {
-        padding: 10px;
-    }
-
-    #contato .btn {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
 }
