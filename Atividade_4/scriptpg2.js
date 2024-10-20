@@ -30,19 +30,26 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 
+    const userID = 'HUwZY5Y-2oOBSw6vC'; 
+    const serviceID = 'service_6tuofp7'; 
+    const templateID = 'template_i3gvwsd'; 
+
+    emailjs.init(userID); 
+
     document.getElementById('agendamento-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
         if (!validarFormulario()) {
-            return;         }
+            return; 
+        }
 
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const telefone = document.getElementById('telefone').value;
         const data = document.getElementById('data').value;
-        const mensagem = document.getElementById('mensagem').value;
+        const mensagem = document.getElementById('mensagem').value || '';
 
-        emailjs.send('service_6tuofp7', 'template_i3gvwsd', {
+        emailjs.send(serviceID, templateID, {
             nome: nome,
             email: email,
             telefone: telefone,
