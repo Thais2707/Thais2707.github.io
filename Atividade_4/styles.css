@@ -227,6 +227,16 @@ footer a:focus {
     height: 100%;
 }
 
+.transition-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
 .testimonial-card:hover {
     transform: translateY(-5px);
 }
