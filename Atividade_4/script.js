@@ -1,7 +1,5 @@
-// Esperar o DOM estar completamente carregado
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Função para validar o formulário de contato
     function validarFormulario() {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -21,22 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-    // Função para validar o formato do email
     function validarEmail(email) {
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(email);
     }
 
-    // Configurações do EmailJS
-    const userID = 'HUwZY5Y-2oOBSw6vC'; // Cole seu User ID aqui
-    const templateID = 'template_i3gvwsd'; // Cole seu Template ID aqui
+    const userID = 'service_6tuofp7'; 
+    const templateID = 'template_i3gvwsd'; 
 
-    // Envio do formulário
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
         if (!validarFormulario()) {
-            return; // Impedir o envio se a validação falhar
+            return; 
         }
 
         const nome = document.getElementById('nome').value;
@@ -44,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const telefone = document.getElementById('telefone').value;
         const mensagem = document.getElementById('mensagem').value;
 
-        // Enviar email via EmailJS
-        emailjs.send(userID, templateID, {
+        emailjs.send(service_6tuofp7, template_i3gvwsd, {
             nome: nome,
             email: email,
             telefone: telefone,
@@ -58,17 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
         });
 
-        // Limpar o formulário após o envio
-        document.getElementById('contact-form').reset();
+         document.getElementById('contact-form').reset();
     });
 
-    // Inicializar AOS para animações
     AOS.init({
-        duration: 1000, // Duração da animação
-        once: true, // Anima uma única vez ao rolar
+        duration: 1000, 
+        once: true, 
     });
 
-    // Adicionar o efeito AOS nas seções HTML
     const testemunhosSection = document.getElementById('testemunhos');
     if (testemunhosSection) {
         testemunhosSection.setAttribute('data-aos', 'fade-up');
