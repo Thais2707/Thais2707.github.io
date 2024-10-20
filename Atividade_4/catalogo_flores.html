@@ -4,56 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Buquês - Jardim do Lago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <style>
+        body {
+            font-family: 'Arima', sans-serif;
+            padding-top: 110px; 
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%; 
+        }
+
+        .card-title {
+            flex-grow: 0; 
+        }
+
+        .card-text {
+            flex-grow: 1; 
+            min-height: 60px; 
+        }
+
+        .btn {
+            margin-top: auto; 
+        }
+    </style>
 </head>
 <body>
 
     <header class="bg-light py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="navbar-brand text-success fw-bold">Jardim do Lago</a>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="ficha_paisagismo.html">Paisagismo Personalizado</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+        <div class="container d-flex justify-content-center align-items-center">
+            <a href="#" class="navbar-brand text-success fw-bold text-center">
+                <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/_dacdb90f-45bd-4282-ad9d-a793e99a80d6-removebg-preview.png?raw=true" alt="Logo Jardim do Lago" style="height: 50px;">
+                <p>Jardim do Lago</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
         </div>
+        <nav class="collapse" id="navbarNav">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-dark" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#contato">Contato</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#testemunhos">Testemunhos</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="py-5">
         <div class="container text-center">
             <h2 class="fw-bold text-success">Catálogo de Buquês</h2>
             <p class="lead text-muted">Escolha o buquê perfeito para qualquer ocasião!</p>
-            <div class="row">
+            <div class="row align-items-stretch"> 
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/Capturark.PNG?raw=true" class="card-img-top" alt="Buquê Clássico">
-                        <div class="card-body">
-                            <h5 class="card-title">Buquê Clássico</h5>
-                            <p class="card-text">Um buquê elegante com rosas vermelhas e brancas, ideal para expressar amor e carinho.</p>
-                            <a href="#" class="btn btn-success">Ver Detalhes</a>
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/Capturark.PNG?raw=true" class="card-img-top" alt="Buquê 30 Razões para Amar">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Buquê 30 Razões para Amar</h5>
+                            <p class="card-text">Um buquê elegante com 30 rosas vermelhas importadas, ideal para expressar amor e carinho.</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/Capturarll.PNG?raw=true" class="card-img-top" alt="Buquê Colorido">
-                        <div class="card-body">
-                            <h5 class="card-title">Buquê Colorido</h5>
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/Capturarll.PNG?raw=true" class="card-img-top" alt="Buque Mix">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Buquê Mix</h5>
                             <p class="card-text">Um vibrante mix de flores tropicais, perfeito para festas e celebrações.</p>
-                            <a href="#" class="btn btn-success">Ver Detalhes</a>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/%C3%A7%C3%A7.PNG?raw=true" class="card-img-top" alt="Buquê de Aniversário">
-                        <div class="card-body">
-                            <h5 class="card-title">Buquê de Aniversário</h5>
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707-jardimdolago.github.io/blob/main/%C3%A7%C3%A7.PNG?raw=true" class="card-img-top" alt="Cartucho Duda">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cartucho Duda</h5>
                             <p class="card-text">Um buquê especial com flores de diferentes cores, ideal para comemorações.</p>
-                            <a href="#" class="btn btn-success">Ver Detalhes</a>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img1.jpg?raw=true" class="card-img-top" alt="Encanto Eterno">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Encanto Eterno</h5>
+                            <p class="card-text">Ideal para presentes inesquecíveis. Celebre momentos especiais com a durabilidade e a magia das flores eternas!</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img2.jpg?raw=true" class="card-img-top" alt="Kit cesta + buque">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Box + Buquê</h5>
+                            <p class="card-text">A combinação perfeita existe! Um presente que une sabor e beleza, ideal para momentos inesquecíveis.</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img6.jpg?raw=true" class="card-img-top" alt="Box com Girassois">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Box de Girassois</h5>
+                            <p class="card-text">A alegria em forma de flores! Perfeito para iluminar o seu dia ou surpreender alguém especial!</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img7.jpg?raw=true" class="card-img-top" alt="Bubble Fran Premium">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bubble Fran Premium</h5>
+                            <p class="card-text">Com girassóis radiantes e um mix de flores vibrantes, trazemos alegria e frescor para qualquer ambiente. Perfeito para iluminar o seu dia!</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img8.jpg?raw=true" class="card-img-top" alt="Baggy Mi">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Baggy Mi</h5>
+                            <p class="card-text">Com um mix de flores coloridas, cada pétala conta uma história e traz alegria ao seu dia. Perfeito para celebrar momentos especiais ou simplesmente para alegrar o lar!</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> 
+                        <img src="https://github.com/Thais2707/Thais2707.github.io/blob/main/img9.jpg?raw=true" class="card-img-top" alt="Bubble Tata">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bubble Tata</h5>
+                            <p class="card-text">Simplicidade que encanta! Este arranjo com gerberas coloridas traz um toque alegre e vibrante para qualquer espaço. Uma explosão de cores que ilumina o seu dia!</p>
+                            <a href="#" class="btn btn-success mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
