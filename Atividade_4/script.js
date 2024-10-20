@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     function validarFormulario() {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -24,10 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 
-    const userID = 'service_6tuofp7'; 
+    const userID = 'HUwZY5Y-2oOBSw6vC';
+    const serviceID = 'service_6tuofp7'; 
     const templateID = 'template_i3gvwsd'; 
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    emailjs.init(userID);
+
+    document.getElementById('agendamento-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
         if (!validarFormulario()) {
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const telefone = document.getElementById('telefone').value;
         const mensagem = document.getElementById('mensagem').value;
 
-        emailjs.send(service_6tuofp7, template_i3gvwsd, {
+        emailjs.send(serviceID, templateID, {
             nome: nome,
             email: email,
             telefone: telefone,
@@ -52,16 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
         });
 
-         document.getElementById('contact-form').reset();
+        document.getElementById('agendamento-form').reset();
     });
-
-    AOS.init({
-        duration: 1000, 
-        once: true, 
-    });
-
-    const testemunhosSection = document.getElementById('testemunhos');
-    if (testemunhosSection) {
-        testemunhosSection.setAttribute('data-aos', 'fade-up');
-    }
 });
