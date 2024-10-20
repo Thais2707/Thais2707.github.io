@@ -1,13 +1,13 @@
 
     function sendEmail(event) {
-        event.preventDefault(); // Evitar o envio padrão do formulário
+        event.preventDefault(); 
 
         const fullName = document.getElementById('fullName').value;
         const email = document.getElementById('email_id').value;
         const message = document.getElementById('message').value;
 
         if (fullName && email && message) {
-            emailjs.send('service_id', 'template_id', {
+            emailjs.send('service_6tuofp7', 'template_zm2gzwh', {
                 from_name: fullName,
                 email_id: email,
                 message: message,
