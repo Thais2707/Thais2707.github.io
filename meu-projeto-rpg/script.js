@@ -21,7 +21,7 @@ document.getElementById('add-player-form').addEventListener('submit', function(e
     const playerName = document.getElementById('player-name').value.trim();
 
     if (playerName && !players[playerName]) {
-        players[playerName] = { missions: [], donations: [], totalXP: 0, totalChaos: 0 };
+        players[playerName] = { missions: [], donations: [], purchases: [], totalXP: 0, totalChaos: 0 };
         document.getElementById('player-list').innerHTML += `<li>${playerName}</li>`;
         document.getElementById('player-message').textContent = `Personagem ${playerName} adicionado.`;
         updatePlayerCheckboxes();
@@ -86,7 +86,8 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
     const purchaseValue = document.getElementById('purchase-value').value.trim();
 
     if (players[purchaser]) {
-        players[purchaser].donations.push({ item: `Compra: ${purchaseItem} - Valor: ${purchaseValue}`, from: 'Banco' });
+        // Adiciona a compra ao array de compras
+        players[purchaser].purchases.push({ item: `Compra: ${purchaseItem} - Valor: ${purchaseValue}`, from: 'Banco' });
         
         document.getElementById('purchase-log').innerHTML += `<li>${purchaser} comprou ${purchaseItem} por ${purchaseValue}.</li>`;
         updateNotes();
@@ -117,10 +118,8 @@ function updateNotes() {
             }
         });
         notesContent += `</ul><h4>Compras:</h4><ul>`;
-        players[player].donations.forEach(donation => {
-            if (donation.item.startsWith('Compra:')) {
-                notesContent += `<li>${donation.item}</li>`;
-            }
+        players[player].purchases.forEach(purchase => {
+            notesContent += `<li>${purchase.item}</li>`;
         });
         notesContent += `</ul>`;
         
@@ -194,16 +193,14 @@ document.getElementById('generate-pdf').addEventListener('click', function() {
 
         doc.text('Compras:', 10, yPosition);
         yPosition += 10;
-        players[player].donations.forEach(donation => {
+        players[player].purchases.forEach(purchase => {
             if (yPosition + 10 > pageHeight) {
                 doc.addPage();
                 yPosition = 20;
                 header();
             }
-            if (donation.item.startsWith('Compra:')) {
-                doc.text(`- ${donation.item}`, 20, yPosition);
-                yPosition += 10;
-            }
+            doc.text(`- ${purchase.item}`, 20, yPosition);
+            yPosition += 10;
         });
 
         doc.text(`Total XP: ${players[player].totalXP}`, 10, yPosition);
